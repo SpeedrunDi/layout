@@ -1,0 +1,15 @@
+@mixin boxes-ic($x, $y) {
+    background: url(../images/css_sprites.png) $x, $y no-repeat;
+}
+
+@mixin lg {
+    @media screen and (max-width: 980px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media screen and (max-width: 620px) {
+        @content;
+    }
+}

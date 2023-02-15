@@ -1,0 +1,74 @@
+.form-block {
+    text-align: center;
+    padding-bottom: 80px;
+    &__title::before {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 99px;
+        margin: 0 auto 20px;
+        background: url(../images/Email.png) no-repeat;
+    }
+    &__input {
+        width: 266px;
+        margin-bottom: 30px;
+    }
+    &__input:last-child {
+        margin-left: 30px;
+    
+        @include md {
+            margin: 0 0 30px;
+        }
+    }
+    &__field {
+        border: 1px solid #377d89;
+        background: #235963;
+        padding: 10px;
+    
+        &::placeholder {
+            color: $color-green;
+            font-size: 14px;
+        }
+    
+        &::-moz-placeholder {
+            color: $color-green;
+            font-size: 14px;
+        }
+    
+        &:-ms-input-placeholder {
+            color: $color-green;
+            font-size: 14px;
+        }
+    }
+    &__textarea {
+        width: 568px;
+        min-height: 123px;
+        resize: none;
+    
+        @include md {
+            width: 266px;
+        }
+    }
+    &__btn {
+        cursor: pointer;
+        font-family: $family-title;
+        font-size: 15px;
+        color: $color-white;
+        text-transform: uppercase;
+        border: none;
+        background: #235963;
+        padding: 9px 28px;
+        margin-top: 30px;
+    
+        &::after {
+            content: "";
+            position: absolute;
+            margin: 27px 0 0 -34px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 11px 0 11px;
+            border-color: #235963 transparent transparent transparent;
+        }
+    }
+}

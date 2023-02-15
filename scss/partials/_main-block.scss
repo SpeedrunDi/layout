@@ -1,0 +1,18 @@
+.main-block {
+    background: url(../images/main-pic.jpg) no-repeat 50% 0 / cover;
+    background-color: #245863;
+    text-align: center;
+    padding: 182px 0 255px;
+    &__title{
+        font-family: $family-title;
+        font-weight: 400;
+        font-size: 41px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        &--lower{
+            display: block;
+            font-size: 31px;
+            padding-top: 7px;
+        }
+    } 
+}

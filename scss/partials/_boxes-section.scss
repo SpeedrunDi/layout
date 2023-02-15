@@ -1,0 +1,39 @@
+.boxes-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -80px -15px 0;
+    text-align: center;
+    &__link {
+        text-decoration: none;
+    }
+    &__title {
+
+        &::before {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 99px;
+            margin: 0 auto 20px;
+        }
+
+        &--chat::before {
+            @include boxes-ic (-10px, -10px)
+        }
+
+        &--pencil::before {
+            @include boxes-ic (-250px, -10px)
+        }
+
+        &--crown::before {
+            @include boxes-ic (-130px, -10px)
+        }
+
+        &--user::before {
+            @include boxes-ic (-370px, -10px)
+        }
+    }
+
+    &__text {
+        font-family: $family-text;
+    }
+}

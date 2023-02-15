@@ -1,0 +1,417 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #fff;
+  background: #29606b;
+  line-height: 1.3;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.header-in {
+  background: rgba(41, 95, 107, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  width: 100%;
+  max-width: inherit;
+  border: 1px solid #296b78;
+  border-top: none;
+  margin: 0 -15px;
+  padding: 20px 30px 17px;
+}
+.header-in__logo {
+  font-family: "Fjalla One", sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-size: 25px;
+}
+.header-in__nav-btn {
+  display: none;
+}
+
+@media screen and (max-width: 620px) {
+  .header-in__nav-btn {
+    width: 42px;
+    height: 36px;
+    position: relative;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-left: -10px;
+    display: block;
+  }
+  .header-in__nav-btn span, .header-in__nav-btn span::before, .header-in__nav-btn span::after {
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+  }
+  .header-in__nav-btn span {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .header-in__nav-btn span::before {
+    content: "";
+    top: -7px;
+    left: 0;
+  }
+  .header-in__nav-btn span::after {
+    content: "";
+    top: 7px;
+    left: 0;
+  }
+}
+.main-nav__ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.main-nav__li {
+  display: inline-block;
+  margin-left: 25px;
+}
+.main-nav__link {
+  font-family: "Fjalla One", sans-serif;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 620px) {
+  .main-nav {
+    display: none;
+  }
+}
+.main-block {
+  background: url(../images/main-pic.jpg) no-repeat 50% 0/cover;
+  background-color: #245863;
+  text-align: center;
+  padding: 182px 0 255px;
+}
+.main-block__title {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-size: 41px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.main-block__title--lower {
+  display: block;
+  font-size: 31px;
+  padding-top: 7px;
+}
+
+.section-title {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-size: 29px;
+  text-transform: uppercase;
+  line-height: 1.7;
+}
+.section-title__lower {
+  display: block;
+  font-size: 21px;
+}
+.section-title--box {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.boxes-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -80px -15px 0;
+  text-align: center;
+}
+.boxes-section__link {
+  text-decoration: none;
+}
+.boxes-section__title::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 99px;
+  margin: 0 auto 20px;
+}
+.boxes-section__title--chat::before {
+  background: url(../images/css_sprites.png) -10px, -10px no-repeat;
+}
+.boxes-section__title--pencil::before {
+  background: url(../images/css_sprites.png) -250px, -10px no-repeat;
+}
+.boxes-section__title--crown::before {
+  background: url(../images/css_sprites.png) -130px, -10px no-repeat;
+}
+.boxes-section__title--user::before {
+  background: url(../images/css_sprites.png) -370px, -10px no-repeat;
+}
+.boxes-section__text {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.box {
+  width: 50%;
+  padding: 28px 90px;
+}
+.box--red {
+  background: #e74b3d;
+}
+.box--yellow {
+  background: #fdbd1f;
+}
+.box--green {
+  background: #1bbb9b;
+}
+.box--purple {
+  background: #9b57b5;
+}
+@media screen and (max-width: 980px) {
+  .box {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 620px) {
+  .box {
+    width: 90%;
+    padding: 50px 40px;
+  }
+}
+
+.info-section {
+  text-align: center;
+  margin: 0 -15px;
+  padding: 50px 0;
+}
+.info-section__row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 73px;
+}
+.info-section__img {
+  border-radius: 50%;
+  margin: auto;
+}
+.info-section__text {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #76b2be;
+  margin-bottom: 35px;
+}
+.info-section__link {
+  display: inline-block;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 9px 19px;
+  margin-top: auto;
+  align-self: center;
+}
+.info-section__link::after {
+  content: "";
+  position: absolute;
+  margin: 28px 0 0 -43px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 11px 0 11px;
+}
+.info-section__link--red {
+  background: #e74b3d;
+}
+.info-section__link--red::after {
+  content: "";
+  border-color: #e74b3d transparent transparent transparent;
+}
+.info-section__link--yellow {
+  background: #fdbd1f;
+}
+.info-section__link--yellow::after {
+  content: "";
+  border-color: #fdbd1f transparent transparent transparent;
+}
+.info-section__link--green {
+  background: #1bbb9b;
+}
+.info-section__link--green::after {
+  content: "";
+  border-color: #1bbb9b transparent transparent transparent;
+}
+.info-section__first {
+  border-top: 6px solid #e74b3d;
+}
+.info-section__second {
+  border-top: 6px solid #fdbd1f;
+}
+.info-section__third {
+  border-top: 6px solid #1bbb9b;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 31.6%;
+  padding: 50px 30px 62px;
+  background: #235963;
+}
+@media screen and (max-width: 980px) {
+  .card {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 620px) {
+  .card {
+    width: 90%;
+  }
+}
+
+.form-block {
+  text-align: center;
+  padding-bottom: 80px;
+}
+.form-block__title::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 99px;
+  margin: 0 auto 20px;
+  background: url(../images/Email.png) no-repeat;
+}
+.form-block__input {
+  width: 266px;
+  margin-bottom: 30px;
+}
+.form-block__input:last-child {
+  margin-left: 30px;
+}
+@media screen and (max-width: 620px) {
+  .form-block__input:last-child {
+    margin: 0 0 30px;
+  }
+}
+.form-block__field {
+  border: 1px solid #377d89;
+  background: #235963;
+  padding: 10px;
+}
+.form-block__field::placeholder {
+  color: #76b2be;
+  font-size: 14px;
+}
+.form-block__field::-moz-placeholder {
+  color: #76b2be;
+  font-size: 14px;
+}
+.form-block__field:-ms-input-placeholder {
+  color: #76b2be;
+  font-size: 14px;
+}
+.form-block__textarea {
+  width: 568px;
+  min-height: 123px;
+  resize: none;
+}
+@media screen and (max-width: 620px) {
+  .form-block__textarea {
+    width: 266px;
+  }
+}
+.form-block__btn {
+  cursor: pointer;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  background: #235963;
+  padding: 9px 28px;
+  margin-top: 30px;
+}
+.form-block__btn::after {
+  content: "";
+  position: absolute;
+  margin: 27px 0 0 -34px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 11px 0 11px;
+  border-color: #235963 transparent transparent transparent;
+}
+
+.footer {
+  background: #245863;
+  padding: 40px 0;
+  text-align: center;
+}
+.footer__contact {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 17px;
+}
+@media screen and (max-width: 620px) {
+  .footer__contact {
+    flex-wrap: wrap;
+  }
+}
+.footer__text {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 15px;
+  margin: 8px 20px 0;
+}
+.footer__tw-ic {
+  width: 36px;
+  height: 36px;
+  background: url(../../images/facebook.png) no-repeat 0;
+  margin-right: 5px;
+}
+.footer__fb-ic {
+  width: 36px;
+  height: 36px;
+  background: url(../images/twitter.png) no-repeat 0;
+}
+.footer__web::before {
+  content: "";
+  display: inline-block;
+  width: 283px;
+  height: 1px;
+  background: #387d89;
+}
+.footer__web-text {
+  padding-top: 11px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.footer__web-text--link {
+  color: #fff;
+  text-decoration: none;
+}
+.footer__web-text--gold {
+  color: #fdbd1f;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */

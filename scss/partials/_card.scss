@@ -1,0 +1,16 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 31.6%;
+    padding: 50px 30px 62px;
+    background: #235963;
+
+    @include lg {
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    @include md {
+        width: 90%;
+    }
+}

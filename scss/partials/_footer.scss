@@ -1,0 +1,52 @@
+.footer {
+    background: #245863;
+    padding: 40px 0;
+    text-align: center;
+    &__contact {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 17px;
+        @include md {
+            flex-wrap: wrap;
+        }
+    }
+    &__text {
+        font-family: $family-text;
+        font-size: 15px;
+        margin: 8px 20px 0;
+    }
+    &__tw-ic {
+        width: 36px;
+        height: 36px;
+        background: url(../../images/facebook.png) no-repeat 0;
+        margin-right: 5px;
+    }
+    
+    &__fb-ic {
+        width: 36px;
+        height: 36px;
+        background: url(../images/twitter.png) no-repeat 0;
+    }
+
+    &__web{
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 283px;
+            height: 1px;
+            background: #387d89;
+        }
+        &-text {
+            padding-top: 11px;
+            font-family: $family-text;
+            &--link{
+                color: $color-white;
+                text-decoration: none;
+            }
+            &--gold {
+                color: #fdbd1f;
+                text-decoration: none;
+            }
+        }
+    }
+}

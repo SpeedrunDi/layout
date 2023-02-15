@@ -1,0 +1,23 @@
+.main-nav{
+    &__ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    &__li{
+        display: inline-block;
+        margin-left: 25px;
+    }
+    &__link{
+        font-family: $family-title;
+        color: $color-white;
+        font-size: 17px;
+        text-decoration: none;
+    }
+}
+
+@include md {
+    .main-nav {
+        display: none;
+    }
+}

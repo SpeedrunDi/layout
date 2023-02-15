@@ -1,0 +1,26 @@
+.box {
+    width: 50%;
+    padding: 28px 90px;
+    &--red{
+        background: $bg-red;
+    }
+    &--yellow{
+        background: $bg-yellow;
+    }
+    &--green{
+        background: $bg-green;
+    }
+    &--purple{
+        background: $bg-purple;
+    }
+
+    @include lg {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    @include md {
+        width: 90%;
+        padding: 50px 40px;
+    }
+}

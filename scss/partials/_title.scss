@@ -1,0 +1,15 @@
+.section-title{
+    font-family: $family-title;
+    font-weight: 400;
+    font-size: 29px;
+    text-transform: uppercase;
+    line-height: 1.7;
+    &__lower{
+        display: block;
+        font-size: 21px;
+    }
+    &--box{
+        color: $color-white;
+        margin-bottom: 0;
+    }
+}
